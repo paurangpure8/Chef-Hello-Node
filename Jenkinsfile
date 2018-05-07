@@ -34,7 +34,7 @@
     }
      stage('Deploy') {
         echo 'Deploying to Staging'
-        sh "chmod 777 ./deploy.sh"
+        sh "chmod 775 ./deploy.sh"
          sh './deploy.sh'
          
         
