@@ -2,7 +2,7 @@
 FROM node:7-onbuild
 
 # set maintainer
-LABEL maintainer "Yogirajdk1993@gmail.com"
+LABEL maintainer "paurangpure8@gmail.com"
 
 # set a health check
 HEALTHCHECK --interval=5s \
