@@ -28,7 +28,6 @@
         // * Second, the 'latest' tag.
         // * Pushing multiple tags is cheap, as all the layers are reused. 
         docker.withRegistry('https://registry.hub.docker.com', '8e8e713e-defe-4245-9411-18df6b57807d') {
-            app.push("${env.BUILD_NUMBER}")
             app.push("master")
         }
     }
