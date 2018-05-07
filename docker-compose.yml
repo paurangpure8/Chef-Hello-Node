@@ -1,6 +1,6 @@
 services: 
   web:
-     image: paurangpure/chefimage:master
+     image: sprabhune/chefproject:master
      deploy:
       restart_policy: 
         condition: on-failure
