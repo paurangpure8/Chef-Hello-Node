@@ -1,3 +1,3 @@
-docker rmi -f sprabhune/chefproject:master || echo "master branch moving on"
-docker tag "sprabhune/chefproject:${BUILD_TAG}"sprabhune/chefproject:master
-docker push sprabhune/chefproject:master
+docker rmi -f paurangpure/chefimage:master || echo "master branch moving on"
+docker tag "paurangpure/chefimage:${BUILD_TAG}"paurangpure/chefimage:master
+docker push paurangpure/chefimage:master
