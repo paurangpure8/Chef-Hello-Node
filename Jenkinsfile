@@ -11,7 +11,7 @@
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("yogiraj11/docker-hub-credentials")
+        app = docker.build("paurangpure/chefimage")
     }
 
         stage('Test image') {
@@ -27,7 +27,7 @@
          //* First, the incremental build number from Jenkins
         // * Second, the 'latest' tag.
         // * Pushing multiple tags is cheap, as all the layers are reused. 
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+        docker.withRegistry('https://registry.hub.docker.com', '43ee0a16-e3a5-4b20-b03e-a5604f39610a') {
             app.push("${env.BUILD_NUMBER}")
             app.push("master")
         }
