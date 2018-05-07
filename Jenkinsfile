@@ -11,7 +11,7 @@
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("sprabhune/chefproject")
+        app = docker.build("paurangpure/chefimage")
     }
 
         stage('Test image') {
