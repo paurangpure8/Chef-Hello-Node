@@ -38,7 +38,7 @@
          
         
     }
-        
+        stage('Email') {
          emailext ( 
        subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
        body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
