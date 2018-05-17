@@ -12,6 +12,7 @@
     }
               stage('Check Node') {
                 echo 'Checking Node Status'
+                sh "chmod 775 ./JenkinsRestart.sh"
                 sh './JenkinsRestart.sh'
             }
     
