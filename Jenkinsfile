@@ -3,7 +3,11 @@
         try {
       //  notifyBuild('STARTED')
         def app
-    
+            stage('Check Node') {
+                echo 'Checking Node Status'
+                sh './JenkinsRestart.sh'
+            }
+            
         stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -37,10 +41,9 @@
      stage('Deploy') {
         echo 'Deploying to Staging'
         sh "chmod 775 ./deploy.sh"
-         sh './deploy.sh'
-         
+         sh './deploy.sh'   
         
-    }
+     }
   } catch (e) {
      // If there was an exception thrown, the build failed
      currentBuild.result = "FAILED"
