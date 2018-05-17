@@ -81,6 +81,7 @@
 //   hipchatSend (color: color, notify: true, message: summary)
  
    emailext (
+       to: 'paurangpure@vdrivit.com',
        subject: subject,
        body: details,
        recipientProviders: [[$class: 'DevelopersRecipientProvider']]
