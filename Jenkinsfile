@@ -3,16 +3,17 @@
         try {
       //  notifyBuild('STARTED')
         def app
-            stage('Check Node') {
-                echo 'Checking Node Status'
-                sh './JenkinsRestart.sh'
-            }
+          
             
         stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
         checkout scm
     }
+              stage('Check Node') {
+                echo 'Checking Node Status'
+                sh './JenkinsRestart.sh'
+            }
     
         stage('Build image') {
         /* This builds the actual image; synonymous to
