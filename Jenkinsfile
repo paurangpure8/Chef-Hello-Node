@@ -1,7 +1,7 @@
     node {
         
         try {
-        notifyBuild('STARTED')
+      //  notifyBuild('STARTED')
         def app
     
         stage('Clone repository') {
@@ -64,7 +64,7 @@
      <p>You can check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>"""
  
    // Override default values based on build status
-   if (buildStatus == 'STARTED') {
+  /* if (buildStatus == 'STARTED') {
      color = 'YELLOW'
      colorCode = '#FFFF00'
    } else if (buildStatus == 'SUCCESSFUL') {
@@ -73,12 +73,12 @@
    } else {
      color = 'RED'
      colorCode = '#FF0000'
-   }
+   } 
  
    // Send notifications
-   //slackSend (color: colorCode, message: summary)
+    slackSend (color: colorCode, message: summary)
  
-//   hipchatSend (color: color, notify: true, message: summary)
+     hipchatSend (color: color, notify: true, message: summary) */
  
    emailext (
        to: 'paurangpure@vdrivit.com',
