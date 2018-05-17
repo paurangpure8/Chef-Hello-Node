@@ -60,7 +60,7 @@
    def colorCode = '#FF0000'
    def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
    def summary = "${subject} (${env.BUILD_URL})"
-   def details = """<p>JOB STATUS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]': is ${buildStatus}</p>
+   def details = """<p>JOB STATUS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]': is deployed with status ${buildStatus}</p>
      <p>You can check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>"""
  
    // Override default values based on build status
